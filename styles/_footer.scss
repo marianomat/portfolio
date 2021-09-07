@@ -1,0 +1,19 @@
+footer {
+	background-color: $bg-color;
+	color: white;
+	min-height: 10vh;
+	padding: 0% 5%;
+	@include flex(center, center, column);
+
+	ul {
+		margin: 20px 0 10px 0;
+		width: 50%;
+		color: #9f9f9f;
+		@include flex(space-around, center, row);
+	}
+
+	h4 {
+		margin: 10px 0 20px 0;
+		color: #9f9f9f;
+	}
+}

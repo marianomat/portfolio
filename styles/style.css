@@ -48,7 +48,16 @@ a {
   color: #2c2c2c;
 }
 
+.h2-mobile {
+  display: none;
+  background: linear-gradient(to left, #38d39f, #38a4d3);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 .intro {
+  padding-top: 50px;
   min-height: 90vh;
   width: 90%;
   margin: auto;
@@ -58,14 +67,14 @@ a {
   align-items: center;
   flex-direction: row;
 }
-.intro h2 {
+.intro .intro-text .h2-desktop {
   font-size: 8rem;
   padding-top: 2rem;
+  display: inline-block;
   background: linear-gradient(to left, #38d39f, #38a4d3);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  display: inline-block;
 }
 .intro h3 {
   font-size: 6rem;
@@ -74,6 +83,10 @@ a {
 .intro p {
   padding-top: 2rem;
   color: #2c2c2c;
+}
+.intro .blog-text {
+  text-decoration: underline;
+  color: red;
 }
 
 .splash {
@@ -213,8 +226,8 @@ footer {
   flex-direction: column;
 }
 footer ul {
-  margin: 20px 0 10px 0;
-  width: 50%;
+  margin: 10px 0 3px 0;
+  width: 10%;
   color: #9f9f9f;
   display: flex;
   justify-content: space-around;
@@ -222,7 +235,9 @@ footer ul {
   flex-direction: row;
 }
 footer h4 {
-  margin: 10px 0 20px 0;
+  margin: 3px 0;
+  font-size: 1.2rem;
+  font-weight: normal;
   color: #9f9f9f;
 }
 
@@ -347,7 +362,7 @@ footer h4 {
 }
 
 /* 48em = 768px */
-@media (min-width: 48em) {
+@media (min-width: 754px) {
   .header li {
     float: left;
   }
@@ -372,9 +387,24 @@ footer h4 {
     width: 100%;
   }
 }
+@media screen and (max-width: 754px) {
+  header {
+    background-color: white !important;
+    width: 100% !important;
+    z-index: 3;
+  }
+
+  .menu {
+    text-align: center !important;
+  }
+  .menu a {
+    font-size: 3rem !important;
+    margin: 10px !important;
+  }
+}
 @media screen and (max-width: 1332px) {
   html {
-    font-size: 53%;
+    font-size: 45%;
   }
 
   .splash {
@@ -390,11 +420,6 @@ footer h4 {
     width: 90%;
   }
 }
-@media (max-width: 48em) {
-  .intro {
-    padding-top: 60px;
-  }
-}
 @media screen and (max-width: 754px) {
   html {
     font-size: 45%;
@@ -404,15 +429,44 @@ footer h4 {
     height: 60%;
   }
 
+  .logo img {
+    width: 25px;
+  }
+  .logo h1 {
+    font-size: 16px;
+  }
+
   .main-head {
     width: 100%;
   }
 
-  .intro-text {
-    margin-top: 2rem;
-    text-align: center;
+  .h2-mobile {
+    display: block;
+    width: 100%;
   }
-  .intro-text h2 {
+
+  .h2-desktop {
+    display: none !important;
+  }
+
+  .intro {
+    align-content: flex-start;
+    padding-top: 70px;
+  }
+
+  .h2-mobile {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 5rem;
+  }
+
+  .intro-text {
+    order: 2;
+    margin-top: 2rem;
+    text-align: start;
+  }
+  .intro-text .h2-desktop {
+    display: none;
     font-size: 5rem;
   }
   .intro-text p {
@@ -431,7 +485,7 @@ footer h4 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 20px 0 20px;
+    margin: 0px 20px 20px 20px;
   }
   .intro-social a img {
     width: 60%;
@@ -439,6 +493,8 @@ footer h4 {
 
   .intro-images {
     text-align: center;
+    margin-bottom: 20px;
+    order: 1;
   }
 
   .elena,

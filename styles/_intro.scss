@@ -1,18 +1,20 @@
+.h2-mobile {
+	display: none;
+	@include titulo-bg();
+}
 .intro {
+	padding-top: 50px;
 	min-height: 90vh;
 	width: 90%;
 	margin: auto;
 	flex-wrap: wrap;
 	@include flex(space-between, center, row);
 
-	h2 {
+	.intro-text .h2-desktop {
 		font-size: 8rem;
 		padding-top: 2rem;
-		background: $gradient;
-		background-clip: text;
-		-webkit-background-clip: text;
-		color: transparent;
 		display: inline-block;
+		@include titulo-bg();
 	}
 	h3 {
 		font-size: 6rem;
@@ -21,6 +23,10 @@
 	p {
 		padding-top: 2rem;
 		color: $gray-text;
+	}
+	.blog-text {
+		text-decoration: underline;
+		color: red;
 	}
 }
 

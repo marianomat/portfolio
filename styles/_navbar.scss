@@ -126,7 +126,7 @@
 
 /* 48em = 768px */
 
-@media (min-width: 48em) {
+@media (min-width: 754px) {
   .header li {
     float: left;
   }
@@ -151,5 +151,17 @@
 }
 
 @media screen and (max-width: 754px) {
+  header {
+    background-color: white!important;
+    width: 100% !important;
+    z-index: 3;
+  }
+  .menu {
+    text-align: center!important;
+    a {
+      font-size: 3rem!important;
+      margin: 10px!important;
+    }
+  }
 
 }

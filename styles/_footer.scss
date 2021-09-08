@@ -6,14 +6,16 @@ footer {
 	@include flex(center, center, column);
 
 	ul {
-		margin: 20px 0 10px 0;
-		width: 50%;
+		margin: 10px 0 3px 0;
+		width: 10%;
 		color: #9f9f9f;
 		@include flex(space-around, center, row);
 	}
 
 	h4 {
-		margin: 10px 0 20px 0;
+		margin: 3px 0;
+		font-size: 1.2rem;
+		font-weight: normal;
 		color: #9f9f9f;
 	}
 }

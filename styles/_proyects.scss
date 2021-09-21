@@ -10,7 +10,53 @@
 	}
 }
 
-.travelly,
-.elena {
-	flex: 1 1 40rem;
+.blog {
+	background-color: #c9f8e9;
+	width: 100%;
+	margin: 180px 0;
+	padding: 10px 30px 50px 30px;
+	border-radius: 30px;
+	h2 {
+		font-size: 32px;
+		margin: 15px 0!important;
+	}
+	.blog-content {
+		@include flex(space-evenly,center,row);
+		.blog-img {
+			width: 50%;
+			img {
+				width: 90%;
+			}
+		}
+		.blog-text{
+			width: 50%;
+			@include flex(flex-start,center,column);
+			.blog-stack-imgs {
+				@include flex(space-evenly,center,row);
+				width: 100%;
+				margin-bottom: 30px;
+				.stack-img {
+					width: 150px;
+				}
+			}
+
+			.blog-p {
+				font-size: 16px;
+				align-self: start;
+				text-align: start;
+				line-height: 28px;
+			}
+			ul {
+				width: 100%;
+				li {
+					align-self: start;
+					font-size: 16px;
+					text-align: start;
+					margin: 8px 15px;
+				}
+			}
+
+		}
+	}
+
 }
